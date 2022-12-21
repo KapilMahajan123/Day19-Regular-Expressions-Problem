@@ -42,12 +42,21 @@ public class UserRegistration {
 		System.out.println("Enter Mobile Number");
 		String mobileNumber ="(91)(-)[6-9]{1}[0-9]{9}";
 		String inputmobileNumber = scanner.next();
+		/*
+		 * As a user need to add Password rules
+		 * At a minimum 8 characters
+		 */
+		System.out.println("Enter Password");
+		String password = "[A-Za-z0-9]{8}$";
+		String inputPassword = scanner.next(); 
 		
 		UserRegistration userRegistration = new UserRegistration();
 		System.out.println(userRegistration.userName(firstName, input));
 		System.out.println(userRegistration.userName(lastName, inputLastName));
 		System.out.println(userRegistration.userName(emailId, inputEmailId));
 		System.out.println(userRegistration.userName(mobileNumber, inputmobileNumber));
+		System.out.println(userRegistration.userName(password, inputPassword));
+
 
 
 
