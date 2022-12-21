@@ -45,9 +45,11 @@ public class UserRegistration {
 		/*
 		 * As a user need to add Password rules
 		 * At a minimum 8 characters
+		 * And maximum any character 
 		 */
 		System.out.println("Enter Password");
-		String password = "[A-Za-z0-9]{8}$";
+		//String password = "[A-Za-z0-9]{8}$";
+		String password = "((?=.*[A-Z]).{8,})";
 		String inputPassword = scanner.next(); 
 		
 		UserRegistration userRegistration = new UserRegistration();
