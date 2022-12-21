@@ -33,12 +33,22 @@ public class UserRegistration {
 		 */
 		System.out.println("Enter Email-Id :");
 		String emailId = "[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2,})";
-		String inputEmailId = scanner.next(); 
+		String inputEmailId = scanner.next();
+		/*
+		 * User need to follow pre-defined Mobile Format
+		 * Country code follow by hypen
+		 * and 10 digit numbers
+		 */
+		System.out.println("Enter Mobile Number");
+		String mobileNumber ="(91)(-)[6-9]{1}[0-9]{9}";
+		String inputmobileNumber = scanner.next();
 		
 		UserRegistration userRegistration = new UserRegistration();
 		System.out.println(userRegistration.userName(firstName, input));
 		System.out.println(userRegistration.userName(lastName, inputLastName));
-		System.out.println(userRegistration.userName(emailId, inputEmailId));   
+		System.out.println(userRegistration.userName(emailId, inputEmailId));
+		System.out.println(userRegistration.userName(mobileNumber, inputmobileNumber));
+
 
 
 
