@@ -15,6 +15,7 @@ public class UserRegistration {
 	}
 
 	public static void main(String[] args) {
+		System.out.println("welcome to user registration program");
 		Scanner scanner = new Scanner(System.in);  //create object
 		/*
 		 * User need to enter a valid First Name and Last Name
@@ -29,10 +30,10 @@ public class UserRegistration {
 		String inputLastName = scanner.next();
 		/*
 		 * User need to enter a valid email
-		 * to valid email is (abc.xyz@bl.co.in)
 		 */
 		System.out.println("Enter Email-Id :");
-		String emailId = "[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2,})";
+		//String emailId = "[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2,})";	 //abc.xyz@bl.co.in
+		String emailId = "[a-zA-z0-9][a-zA-z0-9_.]*@[a-zA-Z0-9]+([.][a-zA-z]+)+";  //to provide all email
 		String inputEmailId = scanner.next();
 		/*
 		 * User need to follow pre-defined Mobile Format
@@ -61,10 +62,6 @@ public class UserRegistration {
 		System.out.println(userRegistration.userName(emailId, inputEmailId));
 		System.out.println(userRegistration.userName(mobileNumber, inputmobileNumber));
 		System.out.println(userRegistration.userName(password, inputPassword));
-
-
-
-
 
 	}
 
